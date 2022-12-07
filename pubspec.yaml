@@ -79,41 +79,53 @@ flutter:
     - family: Baloo
       fonts:
         - asset: assets/fonts/Baloo-Regular.ttf
-          weight: 500
     - family: BebasNeue
       fonts:
         - asset: assets/fonts/BebasNeue-Bold.ttf
+          weight: 700
         - asset: assets/fonts/BebasNeue-Book.ttf
         - asset: assets/fonts/BebasNeue-Light.ttf
+          weight: 300
         - asset: assets/fonts/BebasNeue-Regular.ttf
         - asset: assets/fonts/BebasNeue-Thin.otf
-          weight: 700
+          weight: 200
     - family: Lato
       fonts:
         - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
         - asset: assets/fonts/Lato-BoldItalic.ttf
+          weight: 700
+          style: italic
         - asset: assets/fonts/Lato-Black.ttf
+          weight: 900
         - asset: assets/fonts/Lato-BlackItalic.ttf
+          weight: 900
+          style: italic
         - asset: assets/fonts/Lato-Hairline.ttf
+          weight: 100
         - asset: assets/fonts/Lato-HairlineItalic.ttf
+          weight: 100
+          style: italic
         - asset: assets/fonts/Lato-Medium.ttf
         - asset: assets/fonts/Lato-MediumItalic.ttf
         - asset: assets/fonts/Lato-Thin.ttf
+          weight: 200
         - asset: assets/fonts/Lato-ThinItalic.ttf
+          weight: 200
         - asset: assets/fonts/Lato-Regular.ttf
-          weight: 700
     - family: OpenSans
       fonts:
         - asset: assets/fonts/OpenSans-Bold.ttf
-        - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 700
+        - asset: assets/fonts/OpenSans-Regular.ttf
     - family: Quicksand
       fonts:
         - asset: assets/fonts/Quicksand-Bold.ttf
+          weight: 700
         - asset: assets/fonts/Quicksand-Light.ttf
+          weight: 300
         - asset: assets/fonts/Quicksand-Regular.ttf
         - asset: assets/fonts/Quicksand-Medium.ttf
-          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
