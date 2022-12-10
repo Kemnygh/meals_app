@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/categories.dart';
+import 'package:meals_app/screens/categories.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

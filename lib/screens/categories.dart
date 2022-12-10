@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/screens/category_details.dart';
 
-import './data.dart';
-import './category_item.dart';
+import '../widgets/category_item.dart';
+import '../data.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String recipeTitle = '';
+    String cargTitle = '';
+    String catgId = '';
+    Color catgColor;
 
     // void selectCategory(BuildContext ctx) {
     //   Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
@@ -17,8 +20,11 @@ class Categories extends StatelessWidget {
     // }
 
     void selectCategory(BuildContext ctx) {
-      Navigator.of(ctx)
-          .pushNamed('/category-details', arguments: {'title': recipeTitle});
+      Navigator.of(ctx).pushNamed(CategoryDetails.routeName, arguments: {
+        'title': cargTitle,
+        'id': catgId,
+        'color': catgColor = Colors.transparent
+      });
     }
 
     return Scaffold(
@@ -35,7 +41,9 @@ class Categories extends StatelessWidget {
           children: categorieList.map((ctgy) {
             return InkWell(
                 onTap: () {
-                  recipeTitle = ctgy.title;
+                  cargTitle = ctgy.title;
+                  catgId = ctgy.id;
+                  catgColor = ctgy.color;
                   selectCategory(context);
                 },
                 splashColor: ctgy.color,

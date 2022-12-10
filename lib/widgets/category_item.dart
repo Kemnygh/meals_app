@@ -10,6 +10,11 @@ class CategoryItem extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(left: 5, right: 5),
       decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(ctgy.image),
+          fit: BoxFit.cover,
+          opacity: 0.8,
+        ),
         color: const Color.fromRGBO(95, 95, 93, 0.294),
         backgroundBlendMode: BlendMode.difference,
         gradient: LinearGradient(
@@ -26,7 +31,13 @@ class CategoryItem extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Column(children: [Text(ctgy.title)]),
+      child: Center(
+          child: Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                  color: ctgy.color.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Text(ctgy.title))),
     );
   }
 }

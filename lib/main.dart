@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './category_details.dart';
+import 'package:meals_app/screens/meal_prep.dart';
+import 'screens/category_details.dart';
 
 import 'home.dart';
 
@@ -39,7 +40,13 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                   color: Colors.white))),
       home: const MyHomePage(),
-      routes: {'/category-details': (context) => CategoryDetails()},
+      routes: {
+        CategoryDetails.routeName: (context) => const CategoryDetails(),
+        MealPrep.routName: (context) => const MealPrep()
+      },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: ((context) => const CategoryDetails()),
+      ),
     );
   }
 }
